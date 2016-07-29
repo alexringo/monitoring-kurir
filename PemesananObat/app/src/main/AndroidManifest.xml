@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.pemesananobat">
+
+    <!--
+        Adding permissions
+        -internet
+        -Wake_Lock
+        -C2D_Message
+    -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <permission
+        android:name="net.simplifiedcoding.androidgcm.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="net.simplifiedcoding.androidgcm.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_my_account"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FragmentDetail"
+            android:label="Detail"
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+
+        <!-- GCM Receiver -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.gnirt69.gcmexample" />
+            </intent-filter>
+        </receiver>
+
+        <!-- GCM Receiver Service -->
+        <service
+            android:name=".GCMPushReceiverService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <!-- GCM Registration Intent Service -->
+        <service
+            android:name=".GCMRegistrationIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAtFG5b83wB3sjN4fp14lPSOnVTbnkjusQ" />
+
+        <activity
+            android:name=".Lokasi"
+            android:label="Lokasi"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".FragmentDetail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FragmentDetail" />
+        </activity>
+        <activity
+            android:name=".detail_selesai"
+            android:label="Detail"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name=".UploadFoto"
+            android:label="Upload Foto"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".FragmentDetail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FragmentDetail" />
+        </activity>
+    </application>
+
+</manifest>

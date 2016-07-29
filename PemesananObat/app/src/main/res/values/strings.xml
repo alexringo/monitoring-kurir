@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Kurir Obat</string>
+    <string name="action_settings">Settings</string>
+    <string name="user_hint">User Name</string>
+    <string name="pass_hint">Password</string>
+    <string name="btn_login_text">Login</string>
+    <string name="title_activity_my_account">Home</string>
+    <string name="acc_text">hello</string>
+    <string name="txt_Logout">Logout</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="txt_menu_add">Tambah Pesanan</string>
+    <string name="btn_req_loc">Request Location</string>
+    <string name="txt_coordinate">Coordinate</string>
+    <string name="first_name">Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="btn_add">Add User</string>
+    <string name="btn_del">Delete User</string>
+    <string name="btn_db_update">Update User</string>
+    <string name="btn_db_list">List User</string>
+    <string name="view_db_list">List User</string>
+    <string name="title_activity_login">Log in</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyAtFG5b83wB3sjN4fp14lPSOnVTbnkjusQ
+    </string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="item_title">Daftar Obat</string>
+    <string name="detail_location">Paris testing location</string>
+    <string name="detail_desc">Lorem ipsum yotemai. Lorem ipsum yotemai Lorem ipsum yotemai</string>
+    <string name="title_activity_lokasi">Lokasi Pemesan</string>
+    <string name="title_activity_test">Map</string>
+</resources>
